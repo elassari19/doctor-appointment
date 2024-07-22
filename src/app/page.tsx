@@ -1,112 +1,279 @@
-import Image from "next/image";
+import Image from 'next/image';
+import Link from 'next/link';
+import {
+  cardiology_specialty,
+  eye_specialty,
+  hero_icon,
+  hero_image,
+  logo,
+  mental_specialty,
+  treatment_1,
+  treatment_2,
+  treatment_3,
+  vaccination_specialty,
+} from '../assets';
+import Testemoniels from './components/testemoniels';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
+    <main className="w-full min-h-full grid grid-cols-12 bg-gray-100">
+      {/* Main Content */}
+      <div className="col-span-full mx-4 md:mx-0 flex flex-col md:flex-row md:col-span-10 md:col-start-2  gap-16 justify-center items-center py-16">
+        <div className="flex items-center relative">
+          <Image
+            src={hero_image}
+            alt="doctor"
+            className="rounded-lg shadow-md w-[15rem] md:w-[24rem]"
+          />
+          <div className="flex items-start gap-1 text-sm bg-white rounded-lg px-4 py-2 absolute top-10 -left-20">
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
+              src={hero_icon}
+              alt="icon"
+              width={24}
               height={24}
-              priority
-            />
-          </a>
+              className="pt-1"
+            />{' '}
+            More than 10K <br /> Patients treated!
+          </div>
+        </div>
+        <div className="flex flex-col gap-8 px-4 w-full md:w-1/2">
+          <p className="welcome-text text-green-600 text-lg">
+            Welcome to Medico Healthcare
+          </p>
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">
+            Your Journey to Better Health Starts Here
+          </h1>
+          <Link
+            href="#"
+            className="text-white py-2 bg-green-600 rounded-md hover:bg-green-700 w-fit px-8"
+          >
+            Discover More
+          </Link>
         </div>
       </div>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      {/* services section */}
+      <div className="col-span-full md:col-span-10 md:col-start-2 py-10 px-10 flex flex-col gap-6">
+        <div>
+          <h2 className="text-3xl font-bold text-center mb-4">
+            Dedicated to provide best treatment.
+          </h2>
+          <p className="text-gray-800 text-xl md:w-[90%]">
+            A wonderful serenity has taken possession of my entire soul, like
+            these sweet mornings of spring which I enjoy with my whole heart. I
+            am alone, and feel the charm of existence in this spot, which was
+            created for the bliss of souls like mine.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-20 md:gap-4">
+          <div className="text-white font-semibold rounded-lg flex flex-col gap-3 relative">
+            <Image
+              src={treatment_1}
+              alt="Pediatrician examining a baby"
+              className="h-44 w-72 rounded-lg object-cover"
+            />
+            <div className="px-6 py-2 bg-green-600 absolute -bottom-10 left-4 rounded-xl">
+              <span className=" text-white px-2 py-1 rounded-md inline-block mb-2">
+                For your health
+              </span>
+              <h3 className="text-2xl mb-2">Pediatrician</h3>
+            </div>
+          </div>
+          <div className="text-white font-semibold rounded-lg flex flex-col gap-3 relative">
+            <Image
+              src={treatment_2}
+              alt="Cardiologist examining a patient"
+              className="h-44 w-72 rounded-lg object-cover"
+            />
+            <div className="px-6 py-2 bg-green-600 absolute -bottom-10 left-4 rounded-xl">
+              <span className=" text-white px-2 py-1 rounded-md inline-block mb-2">
+                For your health
+              </span>
+              <h3 className="text-2xl mb-2">Cardiologist</h3>
+            </div>
+          </div>
+          <div className="text-white font-semibold rounded-lg flex flex-col gap-3 relative">
+            <Image
+              src={treatment_3}
+              alt="Dermatologist examining a patient's skin"
+              className="h-44 w-72 rounded-lg object-cover"
+            />
+            <div className="px-6 py-2 bg-green-600 absolute -bottom-10 left-4 rounded-xl">
+              <span className=" text-white px-2 py-1 rounded-md inline-block mb-2">
+                For your health
+              </span>
+              <h3 className="text-2xl mb-2">Dermatologist</h3>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
+      {/* specialty section */}
+      <div className="col-span-full md:col-span-10 md:col-start-2 py-10 px-10 flex flex-col gap-6">
+        <div className="services-header mb-10">
+          <h2 className="services-title text-green-600 text-lg font-bold uppercase mb-4">
+            Services & Treatments
           </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+          <div className="services-cta flex flex-col md:flex-row gap-4 justify-between items-center">
+            <h1 className="services-heading text-3xl font-bold text-gray-800 leading-tight">
+              More than 40 specialty
+              <br />
+              and health care services
+            </h1>
+            <Link
+              href="/services"
+              className="see-all-button bg-green-600 text-white px-4 py-2 rounded-md hover:bg-blue-800"
+            >
+              See All Services
+            </Link>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className=" bg-white rounded-lg shadow-md p-4 flex items-start pt-4">
+            <Image
+              src={mental_specialty}
+              alt="Mental Health Icon"
+              className=" mr-4 h-10 w-10"
+            />
+            <div className="">
+              <h3 className=" text-xl font-semibold text-gray-800 mb-2">
+                Mental Health Service
+              </h3>
+              <p className=" text-gray-600 mb-4">
+                The service provides immediate medical care to patients with
+                acute illnesses or injuries that require immediate attention
+              </p>
+              <div className=" flex items-center">
+                <span className="arrow-icon text-gray-400 h-6 w-6 rounded-full flex justify-center items-center">
+                  →
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className=" bg-white rounded-lg shadow-md p-4 flex items-start pt-4">
+            <Image
+              src={eye_specialty}
+              alt="Eye Diseases Icon"
+              className=" mr-4 h-10 w-10"
+            />
+            <div className="">
+              <h3 className=" text-xl font-semibold text-gray-800 mb-2">
+                Eye Diseases Service
+              </h3>
+              <p className=" text-gray-600 mb-4">
+                The service provides immediate medical care to patients with
+                acute illnesses or injuries that require immediate attention
+              </p>
+              <div className=" flex items-center">
+                <span className="arrow-icon text-gray-400 h-6 w-6 rounded-full flex justify-center items-center">
+                  →
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className=" bg-white rounded-lg shadow-md p-4 flex items-start pt-4">
+            <Image
+              src={vaccination_specialty}
+              alt="Eye Diseases Icon"
+              className=" mr-4 h-10 w-10"
+            />
+            <div className="">
+              <h3 className=" text-xl font-semibold text-gray-800 mb-2">
+                Eye Diseases Service
+              </h3>
+              <p className=" text-gray-600 mb-4">
+                The service provides immediate medical care to patients with
+                acute illnesses or injuries that require immediate attention
+              </p>
+              <div className=" flex items-center">
+                <span className="arrow-icon text-gray-400 h-6 w-6 rounded-full flex justify-center items-center">
+                  →
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className=" bg-white rounded-lg shadow-md p-4 flex items-start pt-4">
+            <Image
+              src={cardiology_specialty}
+              alt="Eye Diseases Icon"
+              className=" mr-4 h-10 w-10"
+            />
+            <div className="">
+              <h3 className=" text-xl font-semibold text-gray-800 mb-2">
+                Eye Diseases Service
+              </h3>
+              <p className=" text-gray-600 mb-4">
+                The service provides immediate medical care to patients with
+                acute illnesses or injuries that require immediate attention
+              </p>
+              <div className=" flex items-center">
+                <span className="arrow-icon text-gray-400 h-6 w-6 rounded-full flex justify-center items-center">
+                  →
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
+      {/* choose section */}
+      <div className="col-span-full md:col-span-10 md:col-start-2 py-10 px-10 flex flex-col gap-6">
+        <div className="flex flex-col-reverse md:flex-row">
+          <div className="left-section">
+            <div className="benefits-list">
+              <h2 className="text-2xl font-semibold py-4">Why Choose Us?</h2>
+              <div className="benefit-item">
+                <span className="benefit-icon"></span>
+                <span className="benefit-text">Safety First Quality Must</span>
+              </div>
+              <div className="benefit-item">
+                <span className="benefit-icon"></span>
+                <span className="benefit-text">Patient-Centric Approach</span>
+              </div>
+              <div className="benefit-item">
+                <span className="benefit-icon"></span>
+                <span className="benefit-text">Focused Leadership</span>
+              </div>
+              <div className="benefit-item">
+                <span className="benefit-icon"></span>
+                <span className="benefit-text">Cutting-Edge Technology</span>
+              </div>
+              <div className="benefit-item">
+                <span className="benefit-icon"></span>
+                <span className="benefit-text">Transparent Pricing</span>
+              </div>
+              <div className="benefit-item">
+                <span className="benefit-icon"></span>
+                <span className="benefit-text">Coordinated Care</span>
+              </div>
+            </div>
+          </div>
+          <div className="right-section">
+            <div className="image-container">
+              <Image
+                src={hero_image}
+                alt="Smiling healthcare professional speaking on the phone"
+              />
+              <div className="image-background"></div>
+            </div>
+          </div>
+        </div>
+        <div className="col-span-full flex flex-col gap-4">
+          <h1 className="text-4xl font-bold">Wellness, Compassion, Quality</h1>
+          <p className="text-xl">
+            They live in Bookmarks grove right at the coast of the Semantics, a
+            large language ocean. A<br /> small river named Duden flows by their
+            place and supplies it.
           </p>
-        </a>
+          <Link href="#" className="cta-button w-fit px-6">
+            Take An Appointment
+          </Link>
+        </div>
+      </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      {/* testemoniels section */}
+      <div className="col-span-full md:col-span-10 md:col-start-2 py-10 px-10 flex flex-col gap-6">
+        <Testemoniels />
       </div>
     </main>
   );
