@@ -24,16 +24,16 @@ const Footer = () => {
         <div className="col-span-full md:col-span-2">
           <h3 className="mb-4 font-bold">SERVICES</h3>
           <ul className="flex flex-col gap-2 text-sm">
-            <li className="hover:underline hover:font-extrabold">
+            <li className="ml-4 hover:underline hover:font-extrabold">
               <Link href="#">Pathology</Link>
             </li>
-            <li className="hover:underline hover:font-extrabold">
+            <li className="ml-4 hover:underline hover:font-extrabold">
               <Link href="#">Ambulance</Link>
             </li>
-            <li className="hover:underline hover:font-extrabold">
+            <li className="ml-4 hover:underline hover:font-extrabold">
               <Link href="#">Radiology</Link>
             </li>
-            <li className="hover:underline hover:font-extrabold">
+            <li className="ml-4 hover:underline hover:font-extrabold">
               <Link href="#">Pharmacy</Link>
             </li>
           </ul>
@@ -41,16 +41,16 @@ const Footer = () => {
         <div className="col-span-full md:col-span-2">
           <h3 className="mb-4 font-bold">HEALTH CHECKUP</h3>
           <ul className="flex flex-col gap-2 text-sm">
-            <li className="hover:underline hover:font-extrabold">
+            <li className="ml-4 hover:underline hover:font-extrabold">
               <Link href="#">Woman Health</Link>
             </li>
-            <li className="hover:underline hover:font-extrabold">
+            <li className="ml-4 hover:underline hover:font-extrabold">
               <Link href="#">Cancer Screening</Link>
             </li>
-            <li className="hover:underline hover:font-extrabold">
+            <li className="ml-4 hover:underline hover:font-extrabold">
               <Link href="#">Cardiac Health</Link>
             </li>
-            <li className="hover:underline hover:font-extrabold">
+            <li className="ml-4 hover:underline hover:font-extrabold">
               <Link href="#">MRI Checkup</Link>
             </li>
           </ul>
@@ -58,16 +58,16 @@ const Footer = () => {
         <div className="col-span-full md:col-span-2">
           <h3 className="mb-4 font-bold">DEPARTMENTS</h3>
           <ul className="flex flex-col gap-2 text-sm">
-            <li className="hover:underline hover:font-extrabold">
+            <li className="ml-4 hover:underline hover:font-extrabold">
               <Link href="#">General</Link>
             </li>
-            <li className="hover:underline hover:font-extrabold">
+            <li className="ml-4 hover:underline hover:font-extrabold">
               <Link href="#">Dermatology</Link>
             </li>
-            <li className="hover:underline hover:font-extrabold">
+            <li className="ml-4 hover:underline hover:font-extrabold">
               <Link href="#">Cardiology</Link>
             </li>
-            <li className="hover:underline hover:font-extrabold">
+            <li className="ml-4 hover:underline hover:font-extrabold">
               <Link href="#">Cancer</Link>
             </li>
           </ul>
@@ -75,10 +75,10 @@ const Footer = () => {
         <div className="col-span-full md:col-span-2">
           <h3 className="mb-4 font-bold">QUICK LINKS</h3>
           <ul className="flex flex-col gap-2 text-sm">
-            <li className="hover:underline hover:font-extrabold">
+            <li className="ml-4 hover:underline hover:font-extrabold">
               <Link href="#">License</Link>
             </li>
-            <li className="hover:underline hover:font-extrabold">
+            <li className="ml-4 hover:underline hover:font-extrabold">
               <Link href="#">Changelog</Link>
             </li>
           </ul>

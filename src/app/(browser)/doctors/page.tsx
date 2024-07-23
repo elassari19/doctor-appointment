@@ -22,7 +22,7 @@ const page = ({ searchParams: { q } }: Props) => {
         img={search_hero}
         className="md:flex-row-reverse"
       />
-      <div className="col-span-10 col-start-2 grid grid-cols-1 gap-8">
+      <div className="col-span-10 col-start-2 grid grid-cols-1 gap-8 md:mb-16">
         <div className="flex flex-nowrap gap-4 overflow-auto">
           <p>Sort by</p>
           {[
